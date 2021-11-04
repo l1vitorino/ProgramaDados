@@ -1,0 +1,99 @@
+"
+<html>
+    <head>
+      <style>
+            .virar{
+              max-width: 200px;
+              transition: transform 0.8s;
+              transform-style: preserve-3d;
+            }
+            .virar-Modulo {
+              width: 150px;
+              height: 200px;
+              perspective: 1000px;
+            }
+            .virar-Modulo:hover .virar{
+              transform: rotateY(180deg);
+            }
+            .verso{
+              transform: rotateY(180deg);
+            }
+            .frente, .verso{
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              background-color: aqua;
+              backface-visibility: hidden;
+            }
+            .cartao {
+                display: block;
+                margin: 16px auto;
+                padding: 32px 20px;
+                width: 150px;
+                height: 200px;
+                text-align: center;
+                border-radius: 8px;
+                box-shadow: 0 3px 12px rgb(95 92 120 / 12%);
+                background-color: #fff;
+            }
+
+            .cartao .header {
+                margin-bottom: 24px;
+            }
+            .text-primario {
+                color: #645F88 !important;
+            }
+            .text-positivo {
+                color: #008000 !important;
+            }
+            .text-negativo {
+                color: #9B111E !important;
+            }
+            h5 {
+                display: block;
+                font-size: 1.25rem; 
+                margin-block-start: 0.67em;
+                margin-block-end: 0.67em;
+                margin-inline-start: 0px;
+                margin-inline-end: 0px;
+                font-weight: bold;
+            }
+            body {
+                margin: 0;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+            }
+            img {
+                vertical-align: middle;
+                border-style: none;
+                max-width: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class='virar-Modulo'>
+            <div class='virar'>
+              <div class='frente'>
+                <div class='cartao wow fadeInUp'>
+                  <div class='header'>
+                    <img src='https://assets.propertyshelf.com/nicaragua/sales-icon-10.png' alt=''>
+                  </div>    
+                    <h5 class='text-primario'>" & FORMAT([Sua Medida], "R$#,##0") & "</h5>
+                    <p>Vendas Líquidas</p>
+                </div>  
+              </div>
+
+              <div class='verso'>
+                 <div class='cartao wow fadeInUp'> 
+                    <h5 class='text-positivo'>" & FORMAT([Sua Medida], "R$#,##0") & "</h5>
+                    <p>Receita</p>
+                 <hr>
+                    <h5 class='text-negativo'>" & FORMAT([Sua Medida], "R$#,##0") & "</h5>
+                    <p>Despesas</p>
+                </div>  
+              </div>
+            </div>
+          </div>
+    </body>
+</html>
+"
