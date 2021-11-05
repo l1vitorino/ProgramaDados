@@ -3,13 +3,13 @@
     <head>
       <style>
             .virar{
-              max-width: 200px;
+              max-width: 250px;
               transition: transform 0.8s;
               transform-style: preserve-3d;
             }
             .virar-Modulo {
               width: 150px;
-              height: 200px;
+              height: 250px;
               perspective: 1000px;
             }
             .virar-Modulo:hover .virar{
@@ -30,7 +30,7 @@
                 margin: 16px auto;
                 padding: 32px 20px;
                 width: 150px;
-                height: 200px;
+                height: 250px;
                 text-align: center;
                 border-radius: 8px;
                 box-shadow: 0 3px 12px rgb(95 92 120 / 12%);
